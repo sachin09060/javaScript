@@ -53,3 +53,21 @@ console.log("The variable x delcaration");
 var x = 20;
 console.log("After the initialization, the second console.log(x) prints 10");
 console.log(x);
+
+// 2. Hoisting with "let" and "const":
+// let and const are block-scoped, and while they are hoisted, they behave differently from var.
+// Both are hoisted to the top of the block (or function), but they remain in a "temporal dead zone" until the code execution reaches the line where they are defined.
+
+// This means you cannot access a "let" or "const" variable before its declaration.
+
+console.log(
+  "Hosting variable y before initializing, which shows error Cannot access 'y' before initialization"
+);
+console.log(y);
+let y = 50;
+
+console.log(
+  "Hosting variable z before initializing, which shows error Cannot access 'z' before initialization"
+);
+console.log(z);
+const z = 50;
